@@ -130,3 +130,40 @@ for day in range(1, 8):
 
 # TODO: Prevent division by zero.
 average_score = 0
+
+# --------------------------------------------------
+# 5. CREATE ELIGIBILITY CONDITIONS
+# --------------------------------------------------
+
+# Graduation year should be between 2025 and 2027
+graduation_eligible = (
+    graduation_year >= 2025
+    and graduation_year <= 2027
+)
+
+# Attendance should be at least 75%
+attendance_eligible = attendance >= 75
+
+# Student should attempt at least 6 practice days
+practice_count_eligible = attempted_days >= 6
+
+# Average score should be at least 70
+average_eligible = average_score >= 70
+
+# There should be no critical score
+critical_score_clear = not critical_score_found
+
+# Student should pass at least 4 practice days
+passed_days_eligible = passed_days >= 4
+
+# Final Placement Readiness
+placement_ready = (
+    graduation_eligible
+    and attendance_eligible
+    and practice_count_eligible
+    and average_eligible
+    and critical_score_clear
+    and passed_days_eligible
+    and project_completed
+    and profile_verified
+)
