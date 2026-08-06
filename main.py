@@ -123,3 +123,10 @@ for day in range(1, 8):
             break
 
         print("Invalid score. Enter -1 or a value between 0 and 100.")
+
+# --------------------------------------------------
+# 4. CALCULATE THE AVERAGE
+# --------------------------------------------------
+
+# TODO: Prevent division by zero.
+average_score = 0
