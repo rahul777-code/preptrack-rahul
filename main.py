@@ -73,3 +73,53 @@ while True:
 
     else:
         print("Invalid input. Enter only yes or no.")
+
+# --------------------------------------------------
+# 2. INITIALIZE COUNTERS AND VARIABLES
+# --------------------------------------------------
+
+# Total Score
+total_score = 0
+
+# Practice Counters
+attempted_days = 0
+absent_days = 0
+passed_days = 0
+failed_days = 0
+
+# Performance Classification Counters
+strong_days = 0
+satisfactory_days = 0
+improvement_days = 0
+critical_days = 0
+
+# Highest Score Details
+highest_score = 0
+highest_score_day = 0
+
+# Lowest Score Details
+lowest_score = 0
+lowest_score_day = 0
+
+# Used to initialize highest and lowest score
+first_attempt_found = False
+
+# Critical Score Details
+critical_score_found = False
+first_critical_day = 0
+first_critical_score = 0 
+
+for day in range(1, 8):
+
+    while True:
+        score = int(
+            input(
+                f"Enter Day {day} score from 0 to 100, "
+                "or -1 for absent: "
+            )
+        )
+
+        if score == -1 or (0 <= score <= 100):
+            break
+
+        print("Invalid score. Enter -1 or a value between 0 and 100.")
